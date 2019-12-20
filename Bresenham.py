@@ -6,13 +6,22 @@ y1=50
 x2=15
 y2=40
 
+p1=80
+q1=80
+p2=100
+q2=120
+
 dy=abs(y2-y1)
 dx=abs(x2-x1)
 dx2=dx*2
 dy2=dy*2
 
+dp=abs(p2-p1)
+dq=abs(q2-q1)
+dp2=dp*2
+dq2=dq*2
+
 image=np.zeros((255,255,1),np.uint8)
-opImage=np.zeros((255,255,1),np.uint8)
 
 cv.imshow("blank image", image)
 image[x1,y1]=255
@@ -50,7 +59,8 @@ def Bresen(xk,yk):
                       print(Pk,"\t",xk,"\t",yk)
     return image
 
-opImage=Bresen(x1,y1)
+image=Bresen(x1,y1)
+#image=Bresen(p1,q1)
 cv.imshow("output Image",opImage)
 
 cv.waitKey(0)
