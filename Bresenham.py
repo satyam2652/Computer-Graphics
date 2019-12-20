@@ -19,7 +19,7 @@ image[x1,y1]=255
 
 def Bresen(xk,yk):
     if(x2>x1):
-        if(y2>y1):
+        if(y2>y1):                      '''for Negative slope greater than 1'''
             Pk=dy2-dx
             print("Pk\tXk\tYk")
             print(Pk,"\t",xk,"\t",yk)
@@ -34,7 +34,7 @@ def Bresen(xk,yk):
                   image[xk,yk]=255
                   print(Pk,"\t",xk,"\t",yk)
         if(y2<y1):
-            if(dy>dx):
+            if(dy>dx):                  ''' for Positive slope greater than 1'''
                 Pk=dx2-dy
                 print("Pk\tXk\tYk")
                 print(Pk,"\t",xk,"\t",yk)
